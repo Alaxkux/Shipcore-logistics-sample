@@ -6,15 +6,19 @@
   <title>ShipCore Simple</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-
 </head>
 <body>
 
   <!-- NAVIGATION -->
   <nav class="nav">
-    <div class="logo"><i class='bx  bx-package'></i> ShipCore</div>
+    <div class="logo"><i class='bx bx-package'></i> ShipCore</div>
+    
+    <!-- Hamburger -->
+    <div class="hamburger" id="hamburger">
+      <i class='bx bx-menu'></i>
+    </div>
 
-    <ul class="nav-links">
+    <ul class="nav-links" id="nav-links">
       <li><a href="#">About</a></li>
       <li><a href="#">Services</a></li>
       <li><a href="#">Track Shipment</a></li>
@@ -26,28 +30,34 @@
   </nav>
 
   <!-- HERO SECTION -->
-<section class="hero">
-  <div class="hero-glass">
-
-    <div class="text-box">
-      <h1 class="slide">Fast, Reliable & Cost-Efficient Logistics for Your Business</h1>
-      <p class="slide">End-to-end freight, delivery & supply-chain solutions designed to move your products faster, safer, and smarter.</p>
-      <a class="hero-btn slide" href="#">Get A Free Quote</a>
+  <section class="hero">
+    <div class="hero-glass">
+      <div class="text-box">
+        <h1>Fast, Reliable & Cost-Efficient Logistics for Your Business</h1>
+        <p>End-to-end freight, delivery & supply-chain solutions designed to move your products faster, safer, and smarter.</p>
+        <a class="hero-btn" href="#">Get A Free Quote</a>
+      </div>
     </div>
 
-  </div>
-
-  <!-- SIDE CARD stays the same -->
-  <div class="side-card">
+    <!-- SIDE CARD -->
+    <div class="side-card">
       <img src="test 2.jpg" alt="truck">
       <div class="side-card-text">
-          <h3>End-to-End Management</h3>
-          <p>From warehousing to final delivery, we handle everything</p>
-          <a href="#">Learn More</a>
+        <h3>End-to-End Management</h3>
+        <p>From warehousing to final delivery, we handle everything</p>
+        <a href="#">Learn More</a>
       </div>
-  </div>
-</section>
+    </div>
+  </section>
 
+  <script>
+    // Toggle mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
 
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
